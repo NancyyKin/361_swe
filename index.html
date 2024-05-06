@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <link rel="stylesheet" href="app.css">
+
+
+    <title>TINCTURE</title>
+</head>
+
+<body>
+    <h1>NANCY'S COLOR PAGE</h1>
+
+
+    <div class="mainPage">
+
+        <section class="news">
+            <button id="news">News</button>
+            <div id="newsContent">
+                <h2>Latest Features:</h2>
+                <ul>
+                    <li>Just added the complementary color to the Individual Color page</li>
+                    <li>Just added the color history bar to the bottom of the screen</li>
+                </ul>
+            </div>
+        </section>
+        <h3>
+            Where you can look at different hex colors and their different properties. Click on the middle button to
+            begin!
+        </h3>
+        <div id="startPicker">
+            <button>Go to color picker!</button>
+        </div>
+
+    </div>
+
+
+
+    <section id="colorPicker">
+        <!-- <form id="colorForm" action="javascript:void(0);"> -->
+        <div>
+            <p>
+                Enter a hex color you&#39;d like to see, or use the color picker to choose a color.
+            </p>
+
+            <label for="typedHex">Hex Number:</label>
+            <input id="typedHex" name="typedHex" type="text" minlength="7" maxlength="7" placeholder="#" autofocus>
+
+            <input type="color" id="selectColorDiagram">
+
+            <!-- <button id="randomHexButton" type="button" data-tooltip="This button generates a random color">rando</button> -->
+
+        </div>
+
+        <div style="height:50px;"></div>
+
+        <div class="submitColor">
+            <button id="submitColor">Submit Color</button>
+            <!-- <input type="submit" id="submitColor"> -->
+        </div>
+        <!-- </form> -->
+    </section>
+
+    <section id="sureColor">
+        <h2>Are you sure you would like to pick this color?</h2>
+        <p>(It will be added to the history for free)</p>
+        <div id="yesColor">
+            <button type="button" id="yesColor">YES</button>
+        </div>
+        <p id="notColor">No, I&#39;d like to choose a new color</p>
+    </section>
+
+
+
+
+    <div id="individualColorPage">
+        <section id="backToPicker">
+            <p><u>&#8592 go back to color picker</u></p>
+        </section>
+
+        <div class="colorTiles">
+            <div>
+                <h3>Selected Color:</h3>
+                <p id="selectedColor">########</p>
+                <div id="currentColor">
+                    <h2>&nbsp</h2>
+                </div>
+            </div>
+
+            <div style="height:100px; width: 100px;">
+                <h2>&nbsp</h2>
+            </div>
+
+            <div>
+                <h3>Complementary Color: <button id="compInfo" type="button">?</button></h3>
+
+                <div id="compContent">
+                    <p>Complementary colors are colors that when combined together will cancel each other's hues out,
+                        producing a grayscale color.
+                        When placed next to each other, they create a strong contrast toe each other. They can also be
+                        seen
+                        as opposite colors to each other.
+                    </p>
+                </div>
+                <p id="compColor">########</p>
+                <div id="complementaryColor">
+                    <h2>&nbsp</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="history">
+        <div id="history">
+            <div>
+                <p>History</p>
+            </div>
+            <div><button class="historyArrow" id="previousColor" type="button">&#8592;</button></div>
+            <div><button class="historyArrow" id="nextColor" type="button">&#8594;</button></div>
+
+            <div id="historyBar">
+                <!-- <p class="historyBox" style="background-color: black;">#000000</p> -->
+            </div>
+
+            <button type="button" id="sureClear">clear</button>
+            <div id="clearAll">
+                <p>Are you sure you would like to clear all? This action cannot be reversed.</p>
+                <button type="button" id="clearHistory">Yes</button>
+                <button type="button" id="historyOK">No</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+
+
+</body>
+
+<footer>
+
+</footer>
+
+</html>
