@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Color Season Calculator</title>
+</head>
+
+<body>
+    <h1>Calculate your Color Season!</h1>
+    <input id="color" type="color" name="color">
+    <button onClick="submitColor()">Submit</button>
+
+    <h2 id="originalColor"></h2>
+    <h2 id="colorSeason"></h2>
+
+    <script>
+        async function submitColor() {
+            let colorInput = document.getElementById('color');
+            let response = await fetch('/color', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `color=${encodeURIComponent(colorInput.value.slice(1))}`
+            });
+            let result = await response.json();
+            document.getElementById('originalColor').innerText = 'Provided hex color is #' + result.original;
+            document.getElementById('originalColor').style.color = '#' + result.original;
+            document.getElementById('colorSeason').innerText = 'The season that color falls in is: ' + result.season;
+
+        }
+    </script>
+</body>
+
+</html>
