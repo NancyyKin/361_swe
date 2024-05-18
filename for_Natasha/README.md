@@ -7,3 +7,7 @@ Data is then sent from the microservice to the requester with a JSON object of t
 
 To set up the enviornment, you need to have node. You can install it by calling "npm init -y" and "npm install --save express request body-parser"
 I start each of the microservices by typing "node (microservice name)". You can stop the microservice by pressing ctrl+c 
+
+
+UML:
+![CS 361 - Season (1)](https://github.com/NancyyKin/361_swe/assets/93944912/fcb2b846-39e0-4ac5-bf5b-773a2721157a)
